@@ -1,5 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Я считаю зарплату по ведомости, введи кол-во работников");
+        int sumZarplat = 0;
+        int cointWork = 1;
+        int zarPlat;
+        int amountWork;
+        amountWork = scanner.nextInt();
+        System.out.println("Ты ввёл " + amountWork + " работников,теперь введи зарплату для каждого,и я скажу общую сумму денег,которую ты должен заплатить работникам");
+        while (cointWork <= amountWork) {
+            zarPlat = scanner.nextInt();
+            sumZarplat += zarPlat;
+            cointWork++;
+        }
+        System.out.println("В сумме ты должен заплатить работникам: " + sumZarplat);
+
     }
 }
